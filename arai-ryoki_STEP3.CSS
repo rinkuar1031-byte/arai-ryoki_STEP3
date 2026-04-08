@@ -1,0 +1,77 @@
+/* ブラウザのデフォルト余白をリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f8;
+    display: flex;
+    justify-content: center; /* これで container 自体を画面の真ん中に置く */
+}
+
+/* 指示書の「画面いっぱいに表示させない」設定 */
+.container {
+    width: 800px; /* ここを固定幅にすることで、右に流れるのを防ぐ */
+    background-color: white;
+}
+
+/* a) ヘッダー部 */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #ffff66;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* タイトルを中央に */
+}
+
+/* ヘッダーの文字が右に寄らないよう、マージンをリセット */
+header h2 {
+    margin: 0;
+}
+
+/* サイドバーとメインを横並びにし、隙間をなくす */
+.contents-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+/* b) サイドバー部 */
+nav {
+    width: 200px; /* 幅を固定 */
+    height: 400px;
+    background-color: #66ffff;
+    padding: 20px;
+}
+
+/* c) メイン部 */
+main {
+    width: 600px; /* 800px - 200px = 600px でぴったり埋める */
+    height: 400px;
+    background-color: #ffebcd;
+    padding: 20px;
+}
+
+/* e) メイン内のテーブルを真ん中に設定 */
+table {
+    margin: 0 auto; /* メインエリアの中で中央配置 */
+    border: 4px solid black;
+    border-collapse: collapse;
+}
+
+/* f) 送信ボタンは右側によせる */
+.submit-btn {
+    text-align: right;
+    width: 100%;
+    max-width: 460px; /* テーブルの幅に合わせる調整 */
+    margin: 10px auto 0;
+}
+
+/* d) フッター部 */
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: #cccccc;
+}
